@@ -16,18 +16,9 @@ namespace ToDoList.Models
     {
       return _instances;
     }
-
-    [TestMethod]
-    public void GetAll_ReturnsEmptyList_ItemList()
+    public static void ClearAll()
     {
-      // Arrange
-      List<Item> newList = new List<Item> { };
-
-      // Act
-      List<Item> result = Item.GetAll();
-
-      // Assert
-      CollectionAssert.AreEqual(newList, result);
+      _instances.Clear();
     }
 
   }
