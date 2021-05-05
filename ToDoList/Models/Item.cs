@@ -6,13 +6,13 @@ namespace ToDoList.Models
   {
 
     public string Description { get; set; }
-    private static List<Item> _instances = new List<Item> { };
+    private static List<string> _instances = new List<string> { };
     public Item(string description)
     {
       Description = description;
-      _instances.Add(this);
+      _instances.Add(description);
     }
-    public static List<Item> GetAll()
+    public static List<string> GetAll()
     {
       return _instances;
     }
